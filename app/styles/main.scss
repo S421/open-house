@@ -1,0 +1,234 @@
+@import 'normalize';
+
+// COLOUR PALETTE
+$dkblue: #303168;
+$blue: #3E3F76;
+$dkpink: #CE3A78;
+$pink: #E94B87;
+$grey: #EEE;
+$offwhite: #F2F2EB;
+
+// FONTS/FONT SIZES
+$font: "Roboto", sans-serif;
+$hdr: 2.25em;
+$subhd: 1.5em;
+$body: 1em;
+
+$ltweight: 300;
+$bldweight: 400;
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  background: $dkblue; // bg color coming in with the 3D effects?
+  font-family: $font;
+  color: white;
+  line-height: 1.25;
+  text-align: center;
+  font-weight: $ltweight;
+  font-size: 1em;
+}
+
+.section--info{
+  width: 90%;
+  max-width: 550px;
+  position: absolute;
+  z-index: 10; 
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: 5em auto;
+  @media screen and (min-width: 1500px) {
+    margin: 15em auto;
+  }
+}
+
+.section--logotype{
+  padding: 6em 0 4em 0;
+  background-image: url(../images/imm2016logotype_small.svg);
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-position: center;
+  @media screen and (max-width: 600px) {
+    padding: 2.4em 0;
+  }
+}
+
+h1{
+  font-size: 3.375em;
+  font-weight: $bldweight;
+  letter-spacing: 0.3em;
+  @media screen and (max-width: 600px) {
+    font-size: 2.4em;
+  }
+  @media screen and (max-width: 370px) {
+    letter-spacing: 0.1em;
+  }
+  @media screen and (min-width: 1500px) {
+    font-size: 4em;
+  }
+}
+
+h2{
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  font-weight: $ltweight;
+  @media screen and (max-width: 600px) {
+    font-size: 1.6em;
+  }
+}
+
+h3{
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  margin: 0.8em 0;
+  @media screen and (max-width: 600px) {
+    font-size: 1.6em;
+  }
+}
+
+h4 {
+  font-size: 2em;
+  margin: 0.8em 0 0.4em;
+}
+
+h5{
+  font-size: 0.667em;
+  font-weight: $ltweight;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+  &.social--icon:hover {
+    opacity: 0.6;
+    border-bottom: 0;
+  }
+}
+
+.section--details{
+  font-size: 1em;
+}
+
+.container--date, .container--location{
+  display: inline-block;
+  height: 20px;
+  margin: 0 0 0 0.667em;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 0.667em;
+  }
+}
+
+.container--location p::before{
+  content:'';
+  background-image: url(../images/pin.svg);
+}
+.container--date p::before{
+  content:'';
+  background-image: url(../images/calendar.svg);
+}
+
+.container--date p::before, .container--location p::before{
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin: 0 0.2em 0 0;
+}
+
+
+form{
+  display: flex;
+  flex-direction: row;
+  padding: 0.8em 0;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input[type=email]{
+  background: $blue;
+  border: 1px solid white;
+  border-radius: 5px 0 0 5px;
+  color: white;
+  padding: 0.667em;
+  width: 100%;
+  font-size: 1em;
+  @media screen and (max-width: 500px) {
+    border-radius: 5px 5px 0 0;
+  }
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+    font-style: italic;
+    font-weight: $ltweight;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    white;
+   opacity:  1;
+   font-style: italic;
+   font-weight: $ltweight;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    white;
+   opacity:  1;
+   font-style: italic;
+   font-weight: $ltweight;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    white;
+   font-style: italic;
+   font-weight: $ltweight;
+}
+
+input[type=submit]{
+  padding: 0.4em 1.667em;
+  border-radius: 0 5px 5px 0;
+  background: white;
+  color: $blue;
+  font-family: $font;
+  font-size: 1em;
+  border: 2px solid white;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    color: $pink;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.line-break {
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+}
+
+.social--icon {
+  display: inline-block;
+  margin: 1.6em 0.4em;
+}
+
+#form-response {
+  color: $pink;
+}
+
+#bg--threejs{
+  position: fixed;
+}
