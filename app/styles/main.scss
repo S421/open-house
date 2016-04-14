@@ -104,50 +104,6 @@ h5{
   font-weight: $ltweight;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  &:hover {
-    border-bottom: 2px solid white;
-  }
-  &.social--icon:hover {
-    opacity: 0.6;
-    border-bottom: 0;
-  }
-}
-
-
-.section--details{
-  font-size: 1em;
-}
-
-.container--date, .container--location{
-  display: inline-block;
-  height: 20px;
-  margin: 0 0 0 0.667em;
-  @media screen and (max-width: 600px) {
-    margin-bottom: 0.667em;
-  }
-}
-
-.container--location p::before{
-  content:'';
-  background-image: url(../images/pin.svg);
-}
-.container--date p::before{
-  content:'';
-  background-image: url(../images/calendar.svg);
-}
-
-.container--date p::before, .container--location p::before{
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin: 0 0.2em 0 0;
-}
 
 
 
