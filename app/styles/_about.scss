@@ -1,0 +1,52 @@
+$blk: #424242;
+$dkblue: #303168;
+
+$about: 1.4em;
+$hdr: 1.67em;
+$bldweight: 500;
+
+.section--about, .section--location{
+  background-color:white;
+  color:$blk;
+  z-index: 10;
+  font-size: $about;
+  font-weight: $bldweight;
+}
+
+.section--about p{
+  line-height: 1.6em;
+  margin-bottom:1em;
+}
+
+.section--about h1{
+  letter-spacing: 0.3em;
+  color:$dkblue;
+  font-size: $hdr;
+  font-weight: $bldweight;
+  margin: 0.75em 0em 1.3em 0em;
+}
+
+.container--blurb, .container--logos, .divider{
+  padding:2.5em;
+  padding-bottom:2em;
+}
+
+.divider{
+  padding-top:0em;
+}
+
+.container--logos p{
+  text-align: center;
+  padding:1em;
+}
+
+#sheridanlogo{
+  width:75%;
+}
+
+#dclogo{
+  width:75%;
+}
+
+hr{
+margin:0;}
