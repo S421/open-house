@@ -17,6 +17,15 @@
  *
  */
 /* eslint-env browser */
+
+//    Hamburger Nav
+    
+$(document).ready(function(){
+	$('#nav-icon3').click(function(){
+		$(".nav--overlay").fadeToggle();
+	});
+});
+
 (function() {
   'use strict';
 
@@ -79,13 +88,6 @@
     });
   }
   createThreeJsBg();
-    
-    //Header
-    
-//    Hamburger Nav
-    
-    
-    
 
   // Ajax form submit
 
