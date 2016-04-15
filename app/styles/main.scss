@@ -1,4 +1,6 @@
 @import 'normalize';
+@import 'footer';
+
 
 // COLOUR PALETTE
 $dkblue: #303168;
@@ -17,6 +19,8 @@ $body: 1em;
 $ltweight: 300;
 $bldweight: 400;
 
+$maxwidth: 960px;
+
 
 *{
   box-sizing: border-box;
@@ -33,11 +37,18 @@ body{
   font-size: 1em;
 }
 
+
+.container{
+    width: 90%;
+    max-width: $maxwidth;
+    margin: 0 auto;
+}
+
 .section--info{
   width: 90%;
   max-width: 550px;
-  position: absolute;
-  z-index: 10; 
+  // position: fixed;
+  z-index: 10;
   top:0;
   bottom:0;
   left:0;
