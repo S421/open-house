@@ -85,6 +85,7 @@
 $(document).ready(function(){
 	$('#nav-icon3').click(function(){
 		$(".nav--overlay").fadeToggle();
+        $(this).toggleClass('open');
 	});
 });
 
