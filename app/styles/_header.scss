@@ -6,7 +6,7 @@ $pink: #E94B87;
 $grey: #EEE;
 $offwhite: #F2F2EB;
 
-
+//Main Header Content Styling
 .section--info{
   width: 90%;
   max-width: 550px;
@@ -34,9 +34,10 @@ $offwhite: #F2F2EB;
     font-size:1.2em;
 }
 
-//nav--Hamburger
+//Hamburger menu options
+
 .nav--container{
-    margin:1em 1em 0 0;
+    margin:1em 0em 0 0;
     position:fixed;
     width:2em;
     height:28px;
@@ -56,6 +57,7 @@ $offwhite: #F2F2EB;
   cursor: pointer;
 }
 
+//hamburger bar styles
 
 #nav-icon3 span{
   display: block;
@@ -68,7 +70,8 @@ $offwhite: #F2F2EB;
   transform: rotate(0deg);
   transition: .25s ease-in-out;
 }
-/* Icon 3 */
+
+//positioning the hamburger bars
 
 #nav-icon3 span:nth-child(1) {
   top: 0px;
@@ -81,6 +84,10 @@ $offwhite: #F2F2EB;
 #nav-icon3 span:nth-child(4) {
   top: 24px;
 }
+
+//attempted to add hamburger animations styles here. Nothing wrong with the code
+//itself, but due to gulp not compiling these animations to css format, 
+//these do not work. 
 
 #nav-icon3.open span:nth-child(1) {
   top: 18px;
@@ -102,7 +109,7 @@ $offwhite: #F2F2EB;
   left: 50%;
 }
 
-//nav--Dropdown
+//menu options styles
 
 .nav--overlay{
     position:fixed;
@@ -120,7 +127,7 @@ $offwhite: #F2F2EB;
     position:fixed;
     left:50%;
     top:50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); //this along with left and top attributes will center the menu items
     z-index:888;
 }
 
