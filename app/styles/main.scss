@@ -21,14 +21,14 @@ $ltweight: 300;
 $bldweight: 400;
 $mediumWeight: 500;
 
-<<<<<<< HEAD
+
 $maxwidth: 960px;
 
-=======
+
 $breakpoint: 480px;
 
 $photo: 118px;
->>>>>>> origin/student-list
+
 
 *{
   box-sizing: border-box;
@@ -222,23 +222,23 @@ input[type=submit]{
 }
 
 // Tilda
-body > * {
-  display: none;
-}
-.studentList {
-  background: #fff;
-  display: block;
-}
-.container {
-  max-width: 80%;
-  margin: 0 auto;
-}
-.photo {
-  height: 100px;
-}
+// body > * {
+//   display: none;
+// }
+// .studentList {
+//   background: #fff;
+//   display: block;
+// }
+// .container {
+//   max-width: 80%;
+//   margin: 0 auto;
+// }
+// .photo {
+//   height: 100px;
+// }
 // above should be deleted
 h1{
-  padding-top:40px;  
+  padding-top:40px;
   text-align: left;
   color:#303168;
 }
@@ -276,4 +276,3 @@ h1{
       }
   }
 }
-
