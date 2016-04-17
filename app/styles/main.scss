@@ -19,9 +19,16 @@ $body: 1em;
 
 $ltweight: 300;
 $bldweight: 400;
+$mediumWeight: 500;
 
+<<<<<<< HEAD
 $maxwidth: 960px;
 
+=======
+$breakpoint: 480px;
+
+$photo: 118px;
+>>>>>>> origin/student-list
 
 *{
   box-sizing: border-box;
@@ -213,3 +220,60 @@ input[type=submit]{
 #bg--threejs{
   position: fixed;
 }
+
+// Tilda
+body > * {
+  display: none;
+}
+.studentList {
+  background: #fff;
+  display: block;
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.photo {
+  height: 100px;
+}
+// above should be deleted
+h1{
+  padding-top:40px;  
+  text-align: left;
+  color:#303168;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .student{
+    margin:20px 1%;
+    width: 23%;
+    @media (max-width:$breakpoint){
+      width: 48%;
+    }
+     .photo{
+        background:grey;
+        margin-bottom: 10px;
+      }
+      .name, .title{
+        text-align: left;
+        font-size: 16px;
+        font-weight: $mediumWeight;
+        color:#303168;
+      }
+      .first, .last{
+        display: inline;
+        @media (max-width:$breakpoint){
+          display: block;
+        }
+      }
+      .title{
+        margin-top: 5px;
+        font-size: 12px;
+        font-weight: $bldweight;
+        color:#424242;
+      }
+  }
+}
+
