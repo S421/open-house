@@ -54,41 +54,6 @@ body{
     margin: 0 auto;
 }
 
-.section--info{
-  text-align: center;
-  width: 90%;
-  max-width: 550px;
-
-  // position: fixed;
-
-  /*position: absolute;*/
-
-  z-index: 10;
-  top:0;
-  bottom:0;
-  left:0;
-  right: 0;
-  margin: 5em auto;
-  @media screen and (min-width: 1500px) {
-    margin: 15em auto;
-  }
-
-}
-
-
-
-.section--logotype{
-  padding: 6em 0 4em 0;
-  background-image: url(../images/imm2016logotype_small.svg);
-  background-repeat: no-repeat;
-  background-size: 35%;
-  background-position: center;
-  @media screen and (max-width: 600px) {
-    padding: 2.4em 0;
-  }
-}
-
-
 .section--info h1{
   font-size: 3.375em;
   font-weight: $bldweight;
@@ -219,29 +184,23 @@ input[type=submit]{
 
 #bg--threejs{
   position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
-// Tilda
-// body > * {
-//   display: none;
-// }
-// .studentList {
-//   background: #fff;
-//   display: block;
-// }
-// .container {
-//   max-width: 80%;
-//   margin: 0 auto;
-// }
-// .photo {
-//   height: 100px;
-// }
-// above should be deleted
 h1{
   padding-top:40px;
   text-align: left;
   color:#303168;
 }
+
+.section--students {
+  background: white;
+}
+
 .list{
   display: flex;
   flex-wrap: wrap;
