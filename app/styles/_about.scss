@@ -1,0 +1,86 @@
+$blk: #424242;
+$dkblue: #303168;
+
+$nrmtext: 1.4em;
+$hdr2: 1.5em;
+$hdr: 1.67em;
+$bldweight: 500;
+$nrmweight: 400;
+
+.section--about, .section--location{
+  background-color:white;
+  color:$blk;
+  z-index: 10;
+  font-size: $nrmtext;
+  font-weight: $bldweight;
+}
+
+.section--location a{
+  color: $dkblue;
+  text-decoration: none;
+}
+
+.section--location{
+  padding-top:4em;
+  text-align: center;
+}
+
+.section--about p{
+  line-height: 1.6em;
+  margin-bottom:1em;
+}
+
+.section--about h1, .section--students h1 {
+  letter-spacing: 0.3em;
+  color:$dkblue;
+  font-size: $hdr;
+  font-weight: $bldweight;
+  padding: 0.75em 0em 1.5em 0em;
+}
+
+.container--blurb, .container--logos, .divider{
+  padding:2.5em 2em;
+  padding-bottom:1.5em;
+}
+
+.divider{
+  padding-top:4em;
+}
+
+.container--location{
+  padding-top:2em;
+}
+
+.container--location p{
+  font-weight: $nrmweight;
+  font-size: 0.9em;
+  padding-top:0.4em;
+}
+
+.section--location h2{
+  color:$dkblue;
+  font-size: $hdr2;
+  padding: 0.75em 0em 1.3em 0em;
+}
+
+.container--logos p{
+  margin: 0 auto;
+  text-align: center;
+  width:70%;
+}
+
+#sheridanlogo{
+  width:100%;
+}
+
+#dclogo{
+  width:100%;
+}
+
+hr {
+margin: 0;
+}
+
+.detail-svg{
+  width:2em;
+}

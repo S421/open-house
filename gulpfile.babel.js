@@ -105,7 +105,7 @@ gulp.task('styles', () => {
         'app/index.html'
       ],
       // CSS Selectors for UnCSS to ignore
-      ignore: []
+      ignore: [/open/]
     })))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('.tmp/styles'))

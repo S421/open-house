@@ -17,6 +17,7 @@
  *
  */
 /* eslint-env browser */
+
 (function() {
   'use strict';
 
@@ -79,6 +80,14 @@
     });
   }
   createThreeJsBg();
+    
+//Show hamburger menu options on click
+$(document).ready(function(){
+	$('#nav-icon3').click(function(){
+		$(".nav--overlay").fadeToggle();
+        $(this).toggleClass('open');
+	});
+});
 
   // Ajax form submit
 
