@@ -1,15 +1,8 @@
 @import 'normalize';
-<<<<<<< HEAD
-<<<<<<< HEAD
 @import 'header';
-=======
 @import 'footer';
-=======
 @import 'about';
->>>>>>> origin/alice
 
-
->>>>>>> origin/footer
 // COLOUR PALETTE
 $dkblue: #303168;
 $blue: #3E3F76;
@@ -27,12 +20,9 @@ $body: 1em;
 $ltweight: 300;
 $bldweight: 400;
 
-<<<<<<< HEAD
 $maxwidth: 960px;
 
 
-=======
->>>>>>> origin/alice
 *{
   box-sizing: border-box;
 }
@@ -44,9 +34,9 @@ body{
   color: white;
   line-height: 1.25;
   font-weight: $ltweight;
-<<<<<<< HEAD
+
   font-size: $body;
-=======
+
   font-size: 1em;
 }
 
@@ -61,11 +51,11 @@ body{
   text-align: center;
   width: 90%;
   max-width: 550px;
-<<<<<<< HEAD
+
   // position: fixed;
-=======
+
   /*position: absolute;*/
->>>>>>> origin/alice
+
   z-index: 10;
   top:0;
   bottom:0;
@@ -75,11 +65,9 @@ body{
   @media screen and (min-width: 1500px) {
     margin: 15em auto;
   }
->>>>>>> origin/footer
+
 }
 
-<<<<<<< HEAD
-=======
 
 
 .section--logotype{
@@ -92,7 +80,7 @@ body{
     padding: 2.4em 0;
   }
 }
->>>>>>> origin/alice
+
 
 .section--info h1{
   font-size: 3.375em;
