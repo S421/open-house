@@ -1,7 +1,7 @@
 $blk: #424242;
 $dkblue: #303168;
 
-$nrmtext: 1.4em;
+$nrmtext: 1em;
 $hdr2: 1.5em;
 $hdr: 1.67em;
 $bldweight: 500;
@@ -27,15 +27,25 @@ $nrmweight: 400;
 
 .section--about p{
   line-height: 1.6em;
-  margin-bottom:1em;
+  margin:0 auto 1em auto;
+  font-size: $hdr2;
+  font-weight: $nrmweight;
+  max-width: 800px;
+  display: block;
+  text-align:left;
+  @media screen and (max-width: 500px) {
+  font-size: $nrmtext;
+  }
 }
 
 .section--about h1, .section--students h1 {
   letter-spacing: 0.3em;
   color:$dkblue;
   font-size: $hdr;
-  font-weight: $bldweight;
+  font-weight: $nrmweight;
   padding: 0.75em 0em 1.5em 0em;
+  text-align: center;
+  display: block;
 }
 
 .container--blurb, .container--logos, .divider{
@@ -63,18 +73,20 @@ $nrmweight: 400;
   padding: 0.75em 0em 1.3em 0em;
 }
 
-.container--logos p{
+.container--logos{
   margin: 0 auto;
   text-align: center;
   width:70%;
 }
 
 #sheridanlogo{
-  width:100%;
+  width:20%;
+  min-width: 100px;
 }
 
 #dclogo{
-  width:100%;
+  width:20%;
+  min-width: 100px;
 }
 
 hr {
