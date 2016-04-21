@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
+<body id="app">
   <!-- NAV BAR -->
   <header>
       <nav class="nav--container">
@@ -152,232 +152,49 @@
     </section> <!-- end section-location-->
 
   <section class="section--students">
+    <div v-show="showModal" class="modal--outer">
+      <div class="modal">
+        <!-- Close button -->
+        <button v-on:click="showModal = false">Close</button>
+        <!-- Student Image (Will change once we have photo's in place) -->
+        <img v-bind:src="images/{{ currentStudent.id }}.jpg" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+
+        <!-- Student Data -->
+        <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
+        <h2>{{ currentStudent.title }}</h2>
+        <p>{{ currentStudent.description }}</p>
+      
+        <ul>
+          <!-- Only render social links that are not blank -->
+          <li v-if="currentStudent.githubUrl !== ''">
+            <a href="{{ currentStudent.githubUrl }}">Github</a>
+          </li>
+          <li v-if="currentStudent.twitterUrl !== ''">
+            <a href="{{ currentStudent.twitterUrl }}">Twitter</a>
+          </li>
+          <li v-if="currentStudent.linkedInUrl !== ''">
+            <a href="{{ currentStudent.linkedInUrl }}">LinkedIn</a>
+          </li>
+          <li v-if="currentStudent.behanceUrl !== ''">
+            <a href="{{ currentStudent.behanceUrl }}">Behance</a>
+          </li>
+        </ul>
+
+        <!-- Portfolio Link -->
+        <a href="{{ currentStudent.portfolioUrl">Portfolio</a>
+      </div>
+    </div>
+
     <div class="container">
       <h1>STUDENTS</h1>
       <div class="list">
-        <div class="student">
+        <div v-for="student in students" class="student" v-on:click="openModal($index)">
           <div class="photo"></div>
           <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
+            <span class="first">{{ student.first }}</span>
+            <span class="last">{{ student.last }}</span>
           </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Borys</span>
-            <span class="last">Petriczko</span>
-          </p>
-          <p class="title">UI/UX Designer | Industrial Designer</p>
-        </div>
-        <div class="student">
-          <div class="photo"></div>
-          <p class="name">
-            <span class="first">Maria</span>
-            <span class="last">Kudriavtceva</span>
-          </p>
-          <p class="title">UI/UX Designer | Front-End Developer</p>
+          <p class="title">{{ student.title }}</p>
         </div>
         <!-- end of list -->
       </div>
@@ -418,6 +235,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.min.js"></script>
+  <script src="scripts/modal.js"></script>
   <!-- build:js scripts/main.min.js -->
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
