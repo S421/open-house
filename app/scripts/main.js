@@ -79,8 +79,9 @@
       console.error('Error during service worker registration:', e);
     });
   }
+
   createThreeJsBg();
-    
+
 //Show hamburger menu options on click
 $(document).ready(function(){
 	$('#nav-icon3').click(function(){
@@ -228,4 +229,5 @@ function createThreeJsBg(){
         renderer.render( scene, camera );
   }
   render();
+
 }
