@@ -89,28 +89,30 @@ $offwhite: #F2F2EB;
   top: 24px;
 }
 
-//attempted to add hamburger animations styles here. Nothing wrong with the code
-//itself, but due to gulp not compiling these animations to css format, 
-//these do not work. 
+//Hamburger animations
 
 #nav-icon3.open span:nth-child(1) {
   top: 18px;
   width: 0%;
   left: 50%;
+     background: #FFF;
 }
 
 #nav-icon3.open span:nth-child(2) {
   transform: rotate(45deg);
+     background: #FFF;
 }
 
 #nav-icon3.open span:nth-child(3) {
   transform: rotate(-45deg);
+     background: #FFF;
 }
 
 #nav-icon3.open span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
+    background: #FFF;
 }
 
 //menu options styles
