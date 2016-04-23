@@ -138,6 +138,14 @@ $offwhite: #F2F2EB;
 .nav--responsive-menu li{
     font-size:3em;
     margin-bottom:0.555em;
+      text-align:center;
+}
+
+.nav--responsive-menu a{
+  
+    text-decoration: none;
+    border-bottom:none;
+    color:white;
 }
 
 .nav--responsive-menu a:hover{
