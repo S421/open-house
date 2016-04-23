@@ -82,16 +82,27 @@
 
   createThreeJsBg();
 
-//Show hamburger menu options on click
-$(document).ready(function(){
-	$('#nav-icon3').click(function(){
-		$(".nav--overlay").fadeToggle();
-        $(this).toggleClass('open');
-	});
+    //Show hamburger menu events
+    
+    $('#nav-icon3,.menu-item').click(function(){
+        $(".nav--overlay").fadeToggle();
+        $('#nav-icon3').toggleClass('open');
+    });
+    
+    //read scroll
+    $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+        console.log(scroll);
+    if (scroll >= 530) {
+       $("#nav-icon3 span").css("background-color","black");
+        $("#nav-icon3.open span").css("background-color","white");    
+    } else {
+        $("#nav-icon3 span").css("background-color","white");
+        $("#nav-icon3.open span").css("background-color","white");
+    }
 });
 
   // Ajax form submit
-
   // validate input
   function validateEmail( email ) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

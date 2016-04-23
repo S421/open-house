@@ -66,9 +66,9 @@
       <div class="nav--overlay">
           <div class="nav--responsive-menu">
               <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Location</a></li>
-                  <li><a href="#">Students</a></li>
+                  <li><a href="#about" class="menu-item">About</a></li>
+                  <li><a href="#location" class="menu-item">Location</a></li>
+                  <li><a href="#students" class="menu-item">Students</a></li>
               </ul>
           </div>
       </div>
@@ -87,7 +87,7 @@
     
 <!--    About section-->
 
-    <section class="section--about" >
+    <section id="about"class="section--about" >
       <section class="section--blurb">
         <div class="container--blurb">
           <h1>ABOUT</h1>
@@ -115,7 +115,7 @@
       </section> <!-- end section-blurb-->
     </section> <!-- end section-about-->
 
-    <section class="section--location">
+    <section id="location" class="section--location">
       <section class="section--details">
         <div class="container--date">
             <p>
@@ -153,7 +153,7 @@
       </section> <!-- end section-map-->
     </section> <!-- end section-location-->
 
-  <section class="section--students">
+  <section id="students" class="section--students">
     <div v-show="showModal" class="modal--outer">
       <div class="modal">
         <!-- Close button -->
