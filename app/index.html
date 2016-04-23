@@ -154,12 +154,12 @@
     </section> <!-- end section-location-->
 
   <section class="section--students">
-    <div v-show="showModal" class="modal--outer">
+    <div v-show="showModal" class="modal--outer" style="display: none;">
       <div class="modal">
         <!-- Close button -->
         <button v-on:click="showModal = false">Close</button>
         <!-- Student Image (Will change once we have photo's in place) -->
-        <img v-bind:src="images/{{ currentStudent.id }}.jpg" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+        <img src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
 
         <!-- Student Data -->
         <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
@@ -191,7 +191,10 @@
       <h1>STUDENTS</h1>
       <div class="list">
         <div v-for="student in students" class="student" v-on:click="openModal($index)">
-          <div class="photo"></div>
+          <div class="photo">
+            <img src="images/portraits/{{ student.id }}.png" alt="{{ student.first }} {{ student.last }}">
+            <img src="images/portraits/{{ student.id }}_sketch.png" alt="{{ student.first }} {{ student.last }}">
+          </div>
           <p class="name">
             <span class="first">{{ student.first }}</span>
             <span class="last">{{ student.last }}</span>
@@ -239,9 +242,9 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.min.js"></script>
-  <script src="scripts/modal.js"></script>
   <!-- build:js scripts/main.min.js -->
   <script src="scripts/main.js"></script>
+  <script src="scripts/modal.js"></script>
   <!-- endbuild -->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

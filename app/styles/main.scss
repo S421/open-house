@@ -212,27 +212,39 @@ h1{
     @media (max-width:$breakpoint){
       width: 48%;
     }
-     .photo{
-        background:grey;
-        margin-bottom: 10px;
-      }
-      .name, .title{
-        text-align: left;
-        font-size: 16px;
-        font-weight: $mediumWeight;
-        color:#303168;
-      }
-      .first, .last{
-        display: inline;
-        @media (max-width:$breakpoint){
-          display: block;
+    .photo{
+      margin-bottom: 10px;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        &:nth-child(2) {
+          position: absolute;
+          top: 0;
+          opacity: 0;
         }
       }
-      .title{
-        margin-top: 5px;
-        font-size: 12px;
-        font-weight: $bldweight;
-        color:#424242;
+    }
+    .name, .title{
+      text-align: left;
+      font-size: 16px;
+      font-weight: $mediumWeight;
+      color:#303168;
+    }
+    .first, .last{
+      display: inline;
+      @media (max-width:$breakpoint){
+        display: block;
       }
+    }
+    .title{
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: $bldweight;
+      color:#424242;
+    }
+    &:hover img:nth-child(2) {
+      opacity: 1;
+    }
   }
 }
