@@ -51,7 +51,7 @@ $offwhite: #F2F2EB;
     transition: .5s ease-in-out;
     cursor:pointer;
     background: rgba(0,0,0,0);// makes whole container clickable
-    z-index:888;
+    z-index:3;
     @media (min-width: $breakpoint) {
       display: none;
     }
@@ -128,7 +128,7 @@ $offwhite: #F2F2EB;
     width:100%;
     background:$dkblue;
     opacity:0.9;
-    z-index:777;
+    z-index:1;
 }
 
 
@@ -138,7 +138,7 @@ $offwhite: #F2F2EB;
     left:50%;
     top:50%;
     transform: translate(-50%,-50%); //this along with left and top attributes will center the menu items
-    z-index:888;
+    z-index:2;
 }
 
 .nav--responsive-menu li{
