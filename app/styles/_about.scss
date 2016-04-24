@@ -13,6 +13,14 @@ $nrmweight: 400;
   z-index: 10;
   font-size: $nrmtext;
   font-weight: $bldweight;
+  width:70%;
+  height:90%;
+  margin: 3em auto;
+  @media screen and (max-width: 600px) {
+      width:100%;
+      height:100%;
+      margin:0 auto;
+  }
 }
 
 .section--location a{
