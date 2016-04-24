@@ -171,21 +171,21 @@
           <ul>
             <!-- Only render social links that are not blank -->
             <li v-if="currentStudent.githubUrl !== ''">
-              <a href="{{ currentStudent.githubUrl }}"><img src="images/sm_github.svg"></a>
+              <a target="_blank" href="{{ currentStudent.githubUrl }}"><img src="images/sm_github.svg"></a>
             </li>
             <li v-if="currentStudent.twitterUrl !== ''">
-              <a href="{{ currentStudent.twitterUrl }}"><img src="images/sm_twitter.svg"></a>
+              <a target="_blank" href="{{ currentStudent.twitterUrl }}"><img src="images/sm_twitter.svg"></a>
             </li>
             <li v-if="currentStudent.linkedInUrl !== ''">
-              <a href="{{ currentStudent.linkedInUrl }}"><img src="images/sm_linkedin.svg"></a>
+              <a target="_blank" href="{{ currentStudent.linkedInUrl }}"><img src="images/sm_linkedin.svg"></a>
             </li>
             <li v-if="currentStudent.behanceUrl !== ''">
-              <a href="{{ currentStudent.behanceUrl }}"><img src="images/sm_behance.svg"></a>
+              <a target="_blank" href="{{ currentStudent.behanceUrl }}"><img src="images/sm_behance.svg"></a>
             </li>
           </ul>
 
           <!-- Portfolio Link -->
-          <a class="portfolio" href="{{ currentStudent.portfolioUrl }}">View Portfolio</a>
+          <a target="_blank" class="portfolio" href="{{ currentStudent.portfolioUrl }}">View Portfolio</a>
         </div>
       </div>
     </div>
