@@ -88,18 +88,6 @@
         $(".nav--overlay").fadeToggle();
         $('#nav-icon3').toggleClass('open');
     });
-    
-    //read scroll
-    $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll >= window.innerHeight) {
-       $("#nav-icon3 span").css("background-color","black");
-        $("#nav-icon3.open span").css("background-color","white");    
-    } else {
-        $("#nav-icon3 span").css("background-color","white");
-        $("#nav-icon3.open span").css("background-color","white");
-    }
-});
 
   // Ajax form submit
   // validate input
