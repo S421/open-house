@@ -82,7 +82,7 @@
 
   createThreeJsBg();
 
-    //Show hamburger menu events
+    //Show hamburger menu items
     
     $('#nav-icon3,.menu-item').click(function(){
         $(".nav--overlay").fadeToggle();
