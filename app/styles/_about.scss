@@ -26,6 +26,9 @@ $nrmweight: 400;
 .section--location a{
   color: $dkblue;
   text-decoration: none;
+  @media screen and (max-width: 600px) {
+    font-size: 0.7em;
+  }
 }
 
 .section--location{
@@ -49,6 +52,10 @@ $nrmweight: 400;
 .container--blurb, .container--logos, .divider{
   padding:2.5em 2em;
   padding-bottom:1.5em;
+  @media screen and (max-width: 600px) {
+    padding:1em 1em;
+    font-size: 0.7em;
+  }
 }
 
 .divider{
@@ -63,6 +70,9 @@ $nrmweight: 400;
   font-weight: $nrmweight;
   font-size: 0.9em;
   padding-top:0.4em;
+  @media screen and (max-width: 600px) {
+    font-size: 0.7em;
+  }
 }
 
 .section--location h2{
