@@ -84,7 +84,7 @@
           <section class="section--logotype"></section>
         </div>
     </section>
-    
+
 <!--    About section-->
 
     <section class="section--about" >
@@ -157,33 +157,33 @@
     <div v-show="showModal" class="modal--outer" style="display: none;">
       <div class="modal">
         <!-- Close button -->
-        <button v-on:click="showModal = false">Close</button>
+        <a v-on:click="showModal = false"><div class="closeBtn"><img src="images/btn_close.svg"></div></a>
         <!-- Student Image (Will change once we have photo's in place) -->
-        <img src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+        <img class="portrait" src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
 
         <!-- Student Data -->
         <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
         <h2>{{ currentStudent.title }}</h2>
         <p>{{ currentStudent.description }}</p>
-      
+
         <ul>
           <!-- Only render social links that are not blank -->
           <li v-if="currentStudent.githubUrl !== ''">
-            <a href="{{ currentStudent.githubUrl }}">Github</a>
+            <a href="{{ currentStudent.githubUrl }}"><img src="images/sm_github.svg"></a>
           </li>
           <li v-if="currentStudent.twitterUrl !== ''">
-            <a href="{{ currentStudent.twitterUrl }}">Twitter</a>
+            <a href="{{ currentStudent.twitterUrl }}"><img src="images/sm_twitter.svg"></a>
           </li>
           <li v-if="currentStudent.linkedInUrl !== ''">
-            <a href="{{ currentStudent.linkedInUrl }}">LinkedIn</a>
+            <a href="{{ currentStudent.linkedInUrl }}"><img src="images/sm_linkedin.svg"></a>
           </li>
           <li v-if="currentStudent.behanceUrl !== ''">
-            <a href="{{ currentStudent.behanceUrl }}">Behance</a>
+            <a href="{{ currentStudent.behanceUrl }}"><img src="images/sm_behance.svg"></a>
           </li>
         </ul>
 
         <!-- Portfolio Link -->
-        <a href="{{ currentStudent.portfolioUrl }}">Portfolio</a>
+        <a class="portfolio" href="{{ currentStudent.portfolioUrl }}">View Portfolio</a>
       </div>
     </div>
 
