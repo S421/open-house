@@ -45,6 +45,11 @@ $h2title: 0.9em;
 .modal .closeBtn img{
 	width:17px;
 	height:17px;
+	transition: all 0.16s ease-out;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.2);
+	}
 }
 
 .modal .closeBtn{
@@ -79,7 +84,7 @@ $h2title: 0.9em;
 }
 
 .modal ul{
-        height:80%;
+    height:80%;
     width:100%;
 }
 
@@ -91,6 +96,10 @@ $h2title: 0.9em;
 	width:45px;
 	height:auto;
 	padding:5px;
+	transition: all 0.16s ease-out;
+	&:hover {
+		opacity: 0.6;
+	}
 }
 
 .modal .portfolio{
@@ -101,6 +110,10 @@ $h2title: 0.9em;
 	text-decoration:none;
 	font-size: $h2title;
 	padding:8px 45px 8px 45px;
+	transition: all 0.16s ease-out;
+	&:hover {
+		opacity: 0.6;
+	}
 }
 
 //iphone 4 portrait

@@ -221,6 +221,7 @@ h1{
     .photo{
       margin-bottom: 10px;
       position: relative;
+      transition: opacity 0.16s ease-out;
       img {
         width: 100%;
         height: auto;
@@ -250,7 +251,9 @@ h1{
       color:#424242;
     }
     &:hover img:nth-child(2) {
-        opacity: 1;
+        transition: opacity 0.16s ease-out;
+        cursor: pointer;
+        opacity: 0.5;
     }
   }
 }
