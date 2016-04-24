@@ -92,8 +92,7 @@
     //read scroll
     $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
-        console.log(scroll);
-    if (scroll >= 530) {
+    if (scroll >= window.innerHeight) {
        $("#nav-icon3 span").css("background-color","black");
         $("#nav-icon3.open span").css("background-color","white");    
     } else {

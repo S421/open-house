@@ -84,7 +84,7 @@
           <section class="section--logotype"></section>
         </div>
     </section>
-    
+
 <!--    About section-->
 
     <section id="about"class="section--about" >
@@ -154,41 +154,47 @@
     </section> <!-- end section-location-->
 
 <<<<<<< HEAD
-  <section id="students" class="section--students">
-    <div v-show="showModal" class="modal--outer">
+<<<<<<< HEAD
 =======
-  <section class="section--students">
+>>>>>>> d1feed1509e0490bf4c4faab1c3def7660017947
+  <section id="students" class="section--students">
     <div v-show="showModal" class="modal--outer" style="display: none;">
+<<<<<<< HEAD
 >>>>>>> 700fba79ec565fc769342d22d4425a2cf1fb2b04
+=======
+>>>>>>> d1feed1509e0490bf4c4faab1c3def7660017947
       <div class="modal">
         <!-- Close button -->
-        <button v-on:click="showModal = false">Close</button>
+        <a v-on:click="showModal = false"><div class="closeBtn"><img src="images/btn_close.svg"></div></a>
         <!-- Student Image (Will change once we have photo's in place) -->
-        <img src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+        <div class="modal-portrait">
+          <img class="portrait" src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+        </div>
+        <div class="modal-content">
+          <!-- Student Data -->
+          <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
+          <h2>{{ currentStudent.title }}</h2>
+          <p>{{ currentStudent.description }}</p>
 
-        <!-- Student Data -->
-        <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
-        <h2>{{ currentStudent.title }}</h2>
-        <p>{{ currentStudent.description }}</p>
-      
-        <ul>
-          <!-- Only render social links that are not blank -->
-          <li v-if="currentStudent.githubUrl !== ''">
-            <a href="{{ currentStudent.githubUrl }}">Github</a>
-          </li>
-          <li v-if="currentStudent.twitterUrl !== ''">
-            <a href="{{ currentStudent.twitterUrl }}">Twitter</a>
-          </li>
-          <li v-if="currentStudent.linkedInUrl !== ''">
-            <a href="{{ currentStudent.linkedInUrl }}">LinkedIn</a>
-          </li>
-          <li v-if="currentStudent.behanceUrl !== ''">
-            <a href="{{ currentStudent.behanceUrl }}">Behance</a>
-          </li>
-        </ul>
+          <ul>
+            <!-- Only render social links that are not blank -->
+            <li v-if="currentStudent.githubUrl !== ''">
+              <a target="_blank" href="{{ currentStudent.githubUrl }}"><img src="images/sm_github.svg"></a>
+            </li>
+            <li v-if="currentStudent.twitterUrl !== ''">
+              <a target="_blank" href="{{ currentStudent.twitterUrl }}"><img src="images/sm_twitter.svg"></a>
+            </li>
+            <li v-if="currentStudent.linkedInUrl !== ''">
+              <a target="_blank" href="{{ currentStudent.linkedInUrl }}"><img src="images/sm_linkedin.svg"></a>
+            </li>
+            <li v-if="currentStudent.behanceUrl !== ''">
+              <a target="_blank" href="{{ currentStudent.behanceUrl }}"><img src="images/sm_behance.svg"></a>
+            </li>
+          </ul>
 
-        <!-- Portfolio Link -->
-        <a href="{{ currentStudent.portfolioUrl }}">Portfolio</a>
+          <!-- Portfolio Link -->
+          <a target="_blank" class="portfolio" href="{{ currentStudent.portfolioUrl }}">View Portfolio</a>
+        </div>
       </div>
     </div>
 
@@ -243,7 +249,6 @@
 
 
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTM2MsXfCFo8PSmLp_bWy4KzupmBj0v6g&callback=initMap" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
@@ -253,6 +258,7 @@
   <script src="scripts/main.js"></script>
   <script src="scripts/modal.js"></script>
   <!-- endbuild -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTM2MsXfCFo8PSmLp_bWy4KzupmBj0v6g&callback=initMap" async defer></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>

@@ -13,11 +13,22 @@ $nrmweight: 400;
   z-index: 10;
   font-size: $nrmtext;
   font-weight: $bldweight;
+  width:70%;
+  height:90%;
+  margin: 3em auto;
+  @media screen and (max-width: 600px) {
+      width:100%;
+      height:100%;
+      margin:0 auto;
+  }
 }
 
 .section--location a{
   color: $dkblue;
   text-decoration: none;
+  @media screen and (max-width: 600px) {
+    font-size: 0.7em;
+  }
 }
 
 .section--location{
@@ -41,6 +52,10 @@ $nrmweight: 400;
 .container--blurb, .container--logos, .divider{
   padding:2.5em 2em;
   padding-bottom:1.5em;
+  @media screen and (max-width: 600px) {
+    padding:1em 1em;
+    font-size: 0.7em;
+  }
 }
 
 .divider{
@@ -55,6 +70,9 @@ $nrmweight: 400;
   font-weight: $nrmweight;
   font-size: 0.9em;
   padding-top:0.4em;
+  @media screen and (max-width: 600px) {
+    font-size: 0.7em;
+  }
 }
 
 .section--location h2{
@@ -70,11 +88,14 @@ $nrmweight: 400;
 }
 
 #sheridanlogo{
-  width:100%;
+  width:39%;
+  display: inline-block;
+  float:left;
 }
 
 #dclogo{
-  width:100%;
+  width:47%;
+  display: inline-block;
 }
 
 hr {
