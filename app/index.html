@@ -159,31 +159,34 @@
         <!-- Close button -->
         <a v-on:click="showModal = false"><div class="closeBtn"><img src="images/btn_close.svg"></div></a>
         <!-- Student Image (Will change once we have photo's in place) -->
-        <img class="portrait" src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+        <div class="modal-portrait">
+          <img class="portrait" src="images/portraits/{{ currentStudent.id }}.png" alt="{{ currentStudent.first }} {{ currentStudent.last }}">
+        </div>
+        <div class="modal-content">
+          <!-- Student Data -->
+          <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
+          <h2>{{ currentStudent.title }}</h2>
+          <p>{{ currentStudent.description }}</p>
 
-        <!-- Student Data -->
-        <h1>{{ currentStudent.first }} {{ currentStudent.last }}</h1>
-        <h2>{{ currentStudent.title }}</h2>
-        <p>{{ currentStudent.description }}</p>
+          <ul>
+            <!-- Only render social links that are not blank -->
+            <li v-if="currentStudent.githubUrl !== ''">
+              <a href="{{ currentStudent.githubUrl }}"><img src="images/sm_github.svg"></a>
+            </li>
+            <li v-if="currentStudent.twitterUrl !== ''">
+              <a href="{{ currentStudent.twitterUrl }}"><img src="images/sm_twitter.svg"></a>
+            </li>
+            <li v-if="currentStudent.linkedInUrl !== ''">
+              <a href="{{ currentStudent.linkedInUrl }}"><img src="images/sm_linkedin.svg"></a>
+            </li>
+            <li v-if="currentStudent.behanceUrl !== ''">
+              <a href="{{ currentStudent.behanceUrl }}"><img src="images/sm_behance.svg"></a>
+            </li>
+          </ul>
 
-        <ul>
-          <!-- Only render social links that are not blank -->
-          <li v-if="currentStudent.githubUrl !== ''">
-            <a href="{{ currentStudent.githubUrl }}"><img src="images/sm_github.svg"></a>
-          </li>
-          <li v-if="currentStudent.twitterUrl !== ''">
-            <a href="{{ currentStudent.twitterUrl }}"><img src="images/sm_twitter.svg"></a>
-          </li>
-          <li v-if="currentStudent.linkedInUrl !== ''">
-            <a href="{{ currentStudent.linkedInUrl }}"><img src="images/sm_linkedin.svg"></a>
-          </li>
-          <li v-if="currentStudent.behanceUrl !== ''">
-            <a href="{{ currentStudent.behanceUrl }}"><img src="images/sm_behance.svg"></a>
-          </li>
-        </ul>
-
-        <!-- Portfolio Link -->
-        <a class="portfolio" href="{{ currentStudent.portfolioUrl }}">View Portfolio</a>
+          <!-- Portfolio Link -->
+          <a class="portfolio" href="{{ currentStudent.portfolioUrl }}">View Portfolio</a>
+        </div>
       </div>
     </div>
 
