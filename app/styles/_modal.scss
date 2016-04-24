@@ -5,7 +5,7 @@
 	bottom: 0;
 	right: 0;
 	background: rgba(0, 0, 0, 0.5);
-	z-index: 3;
+	z-index: 4;
 }
 
 .modal {
@@ -64,19 +64,23 @@ $h2title: 0.9em;
 }
 
 .modal h2{
-	margin-bottom:20px;
+	margin-bottom:1em;
 	font-weight: $bldweight;
 	font-size:$h2title;
 }
 
 .modal p{
 	text-align:left;
-	margin:10px;
-	padding-top:15px;
+	padding-top:1em;
+    padding-bottom:1em;
 	font-size:$h2title;
 	font-weight: $bldweight;
 	border-top:1px solid $gray;
-	padding-bottom:35px;
+}
+
+.modal ul{
+        height:80%;
+    width:100%;
 }
 
 .modal li{
@@ -97,8 +101,46 @@ $h2title: 0.9em;
 	text-decoration:none;
 	font-size: $h2title;
 	padding:8px 45px 8px 45px;
-	margin:20px;
 }
+
+//iphone 4 portrait
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+    .modal{
+        padding:1em;
+    }
+    
+    .modal-portrait img.portrait{
+        margin:0;
+        max-height:30%;
+    }
+    
+    .modal h1{
+        margin-top:0;
+    }
+    
+    .modal h2{
+        margin-bottom:0.5em;
+    }
+    .modal p{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    .modal a.portfolio{
+        margin-top:0.5em;
+        margin-bottom:0.5em;
+    }
+
+}
+
+//iphone 4 landscape
+
+
+
+
 
 @media (min-width: 550px){
 	.modal p{
