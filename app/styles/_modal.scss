@@ -90,12 +90,12 @@ $h2title: 0.9em;
 }
 
 .modal .portfolio{
-	display:block;
+	display:inline-block;
 	background: $pink;
 	border-radius:5px;
 	color:white;
 	text-decoration:none;
 	font-size: $h2title;
-	padding:5px 0px 8px 0px;
+	padding:8px 45px 8px 45px;
 	margin:20px 20px 20px 20px;
 }
