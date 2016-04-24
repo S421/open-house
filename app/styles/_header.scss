@@ -51,6 +51,9 @@ $offwhite: #F2F2EB;
     transition: .5s ease-in-out;
     cursor:pointer;
     background: rgba(0,0,0,0);// makes whole container clickable
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
 }
 
 #nav-icon3{

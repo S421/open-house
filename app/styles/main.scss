@@ -1,9 +1,3 @@
-@import 'normalize';
-@import 'header';
-@import 'footer';
-@import 'about';
-@import 'modal';
-
 // COLOUR PALETTE
 $dkblue: #303168;
 $blue: #3E3F76;
@@ -26,9 +20,15 @@ $mediumWeight: 500;
 $maxwidth: 960px;
 
 
-$breakpoint: 480px;
+$breakpoint: 600px;
 
 $photo: 118px;
+
+@import 'normalize';
+@import 'header';
+@import 'footer';
+@import 'about';
+@import 'modal';
 
 
 *{
@@ -202,7 +202,7 @@ h1{
   background: white;
   width:90%;
   margin:0 auto;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $breakpoint) {
       width:100%;
       height:100%;
   }
