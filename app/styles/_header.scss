@@ -51,9 +51,6 @@ $offwhite: #F2F2EB;
     cursor:pointer;
     background: rgba(0,0,0,0);// makes whole container clickable
     z-index:3;
-    @media (min-width: $breakpoint) {
-      display: none;
-    }
 }
 
 #nav-icon3{
@@ -71,7 +68,7 @@ $offwhite: #F2F2EB;
   position: absolute;
   height: 3px;
   width: 2em;
-  background: #FFF;
+  background: $pink;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -98,24 +95,24 @@ $offwhite: #F2F2EB;
     top: 18px;
     width: 0%;
     left: 50%;
-    background: #FFF;
+    background: $pink;
 }
 
 #nav-icon3.open span:nth-child(2) {
     transform: rotate(45deg);
-    background: #FFF;
+    background: $pink;
 }
 
 #nav-icon3.open span:nth-child(3) {
   transform: rotate(-45deg);
-     background: #FFF;
+     background: $pink;
 }
 
 #nav-icon3.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
-    background: #FFF;
+    background: $pink;
 }
 
 //menu options styles
