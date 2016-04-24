@@ -128,10 +128,16 @@ function initMap() {
     styles: styleArray,
     zoom: 17
   });
+    
+map.setOptions({
+    scrollwheel:false
+})
 
   var marker = new google.maps.Marker({
       position: {lat: 43.6464218, lng: -79.3958105},
       map: map,
       title: 'Rediscover'
   });
+    
+    
 }
